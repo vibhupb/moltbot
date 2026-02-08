@@ -1,0 +1,26 @@
+# GitHub Actions are explicitly disabled for this repository.
+# This file exists to prevent workflows from being enabled when syncing with upstream forks.
+# 
+# If you need to enable GitHub Actions, you must:
+# 1. Delete this file
+# 2. Add your desired workflow files
+#
+# DO NOT remove this file unless you intend to enable GitHub Actions.
+
+name: Disabled
+
+# This workflow will never run because no trigger events are defined
+# and the job is designed to fail immediately if somehow triggered
+
+on:
+  # No trigger events - this workflow cannot be triggered
+
+jobs:
+  disabled:
+    runs-on: ubuntu-latest
+    if: false  # Always skip this job
+    steps:
+      - name: This workflow is disabled
+        run: |
+          echo "GitHub Actions are disabled for this repository"
+          exit 1
